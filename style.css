@@ -1,0 +1,332 @@
+@import url('https://fonts.googleapis.com/css2?family=Playball&display=swap');
+
+@import url('https://fonts.googleapis.com/css2? família= Exo+2 &family= Roboto+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100; 1.200;1.300;1.400;1.500;1.600;1.700;1.800;1.900 & display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: Cambria, Georgia, Times, 'Times New Roman', serif;
+}
+
+body {
+    font-family: 'cursive', sans-serif;
+    font-size: 18px;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #9e9d9da4;
+}
+
+header {
+    margin-top: 15px;
+    background: #333333ce;
+    color: #fff;
+    margin-inline: 25px;
+    padding: 5px;
+    text-align: start;
+    align-items: center;
+    cursor: pointer;
+    text-decoration: none;
+    border: 2px solid #000;
+    border-radius: 50px;
+    padding: 10px;
+    transition: background-color 0.3s, border 0.3s, color 0.3s;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: center;
+    font-size: 70px;
+}
+
+.logo img {
+    margin-right: 18%;
+}
+
+.logo h1 {
+    font-family: 'Playball', cursive;
+    font-size: 50px;
+    color: #000000;
+    font-size: larger;
+    text-decoration: underline;
+}
+
+.navbar {
+    gap: 32px;
+    list-style: none;
+    padding: 5px;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+    border: 2px solid #000;
+    border-radius: 50px;
+    padding: 10px;
+    transition: background-color 0.3s, border 0.3s, color 0.3s;
+    text-align: center;
+    display: inline-block;
+    margin-inline: 25%;
+}
+
+.home{
+    display: none;
+}
+
+.navbar:hover {
+    border: 2px solid #000000;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar li {
+    margin: 0 15px;
+    display: flex;
+    gap: 32px;
+}
+
+video {
+    padding: 1px;
+    width: 800px; /* ajuste conforme necessário */
+    height: 400px; /* ajuste conforme necessário */
+    margin: 10px auto; /* Isso centralizará horizontalmente e adiciona 10px de margem superior */
+    display: block; /* Garante que a margem automática funcione corretamente */
+    border: 2px solid #333; /* Adiciona um contorno de 2 pixels sólidos de cor cinza escuro (#333) */
+    border-radius: 15px; /* Torna as bordas mais arredondadas */
+  }
+
+.navbar a {
+    color: #ffffff;
+    text-decoration: none;
+    padding-bottom: 16px;
+    padding-top: 16px;
+    transition: color 0.3s;
+}
+
+.navbar a:hover {
+    color: #000000;
+}
+
+.hamburguer {
+    display: none;
+    border: none;
+    background: none;
+    border-top: 3px solid #fff;
+    cursor: pointer;
+}
+
+.hamburguer::before,
+.hamburguer::after {
+    content: " ";
+    display: block;
+    width: 30px;
+    height: 3px;
+    background: #fff;
+    margin-top: 5px;
+    position: relative;
+    transition: 0.3s;
+}
+
+.menu-toggle {
+    display: none;
+}
+
+.close-button {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    font-size: 24px;
+    color: #fff;
+    cursor: pointer;
+    display: none;
+    z-index: 2;
+}
+
+@media (max-width: 750px) {
+    .logo {
+        display: flex;
+        padding: 12px;
+        position: relative;
+        font-size: 40px;
+    }
+
+    .home{
+        display: flex;
+    }
+
+    .duvida{
+        display: none;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .hamburguer {
+        display: block;
+        cursor: pointer;
+        font-size: 24px;
+        color: #fff;
+        margin-left: auto;
+        margin-right: auto;
+        z-index: 1;
+    }
+
+    .navbar {
+        position: fixed;
+        top: 50%;
+        left: 40%;
+        transform: translate(-50%, -50%) scale(0);
+        width: 90%;
+        background: #30303bde;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        gap: 20px;
+        pointer-events: none;
+        transition: transform 0.5s ease-in-out;
+    }
+
+    .navbar.active {
+        transform: translate(-65%, -50%) scale(1);
+        pointer-events: all;
+    }
+
+    .navbar ul {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        padding: 0;
+    }
+
+    .navbar li {
+        margin: 5px 0;
+    }
+
+    .navbar a {
+        font-size: 25px;
+        opacity: 1;
+        text-decoration: none;
+        color: #fff;
+        transition: color 0.3s;
+    }
+
+    .navbar a:hover {
+        color: #000;
+    }
+
+    .about{
+        display: flex;
+        justify-content: space-between;
+        font-size: 17px;
+    }
+
+    .dialog{
+        max-width: 100%;
+    }
+    
+    .close {
+        background-color: rgb(255, 255, 255);
+        font-size: medium;
+        padding: 4px;
+        border-radius: 10px 10px 10px 10px;
+        }
+
+}
+
+main {
+    flex: 1;
+    padding: 20px;
+    font-size: 17px;
+}
+
+.about {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.about h2{
+    font-family: 'Playball', cursive;
+    font-size: 38px;
+}
+
+.about p{
+    font-family:  'Exo 2', 'Roboto Condensed' sans-serif;
+}
+
+.about-content {
+    flex: 1;
+    padding: 20px;
+}
+
+.about2 {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.about-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 0 10px 10px 0;
+}
+
+dialog {
+    background-color: rgb(255, 255, 255);
+    font-size: medium;
+    align-items: center;
+    max-width: 50%;
+    border-radius: 10px 10px 10px 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 10% auto;
+    left: 10%;
+    right: 10%;
+    padding-top: 9px;
+}
+
+.close {
+    background-color: rgb(255, 255, 255);
+    font-size: medium;
+    padding: 4px;
+    border-radius: 10px 10px 10px 10px;
+}
+
+
+button:hover {
+    background-color: #333333ce; /* Cor que aparecerá ao passar o mouse sobre o botão */
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center; 
+    padding: 30px 0;
+}
+
+a {
+    color: #0003ce;
+    font-size: larger; /* Você pode ajustar o valor conforme necessário */
+    text-decoration: underline; /* Adiciona um risco embaixo do texto */
+}
+
